@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System.IO;
 
 namespace WebApiTesterCore
 {
     public class Startup
     {
         private AppSettings _appSetting;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,8 +32,11 @@ namespace WebApiTesterCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            var path = Directory.GetCurrentDirectory();
+            loggerFactory.AddFile($"{path}\\Logs\\Logs.txt");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

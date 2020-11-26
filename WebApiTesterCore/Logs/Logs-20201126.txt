@@ -1,0 +1,6 @@
+2020-11-26T17:00:12.8757400+05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-26T17:00:12.9060690+05:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-26T17:00:12.9088764+05:00  [INF] Content root path: "C:\Users\tahiralvi\source\repos\WebApiTesterCore\WebApiTesterCore" (b5d60022)
+2020-11-26T17:00:12.9755622+05:00 800000d1-0002-f300-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2020-11-26T17:00:13.4184485+05:00 800000d1-0002-f300-b63f-84710c7967bb [INF] The Test.Get method has been accessed (74f2df9f)
+2020-11-26T17:00:54.5820109+05:00 80000021-0003-f700-b63f-84710c7967bb [INF] {"componentName":"A sample name","keyName":"A sample key name","keyValue":"A sample key value for the test"} (9ff47053)

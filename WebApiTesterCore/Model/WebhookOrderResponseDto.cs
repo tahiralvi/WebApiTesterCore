@@ -191,11 +191,13 @@
         public object[] discount_allocations { get; set; }
         public object[] tax_lines { get; set; }
     }
+
     public class Discounted_Price_Set
     {
         public Shop_Money shop_money { get; set; }
         public Presentment_Money presentment_money { get; set; }
     }
+
     public class Total_Line_Items_Price_Set
     {
         public Shop_Money shop_money { get; set; }
