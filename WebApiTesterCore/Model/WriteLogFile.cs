@@ -3,7 +3,7 @@ using System.IO;
 
 namespace WebApiTesterCore.Model
 {
-    public class WriteLogFile
+    public static class WriteLogFile
     {
         public static bool WriteLog(string strFileName, string strMessage)
         {
@@ -18,7 +18,8 @@ namespace WebApiTesterCore.Model
             }
             catch (Exception ex)
             {
-                return false;
+                Console.WriteLine(ex.InnerException.Message.ToString());
+                throw;
             }
         }
 
@@ -39,7 +40,8 @@ namespace WebApiTesterCore.Model
             }
             catch (Exception ex)
             {
-                return false;
+                Console.WriteLine(ex.InnerException.Message.ToString());
+                throw;
             }
         }
     }

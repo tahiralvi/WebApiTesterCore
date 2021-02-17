@@ -47,8 +47,6 @@ namespace WebApiTesterCore.Controllers
         [HttpPost]
         public async Task<ActionResult> OrderCreatedViaWhook([FromBody] WebhookOrderResponseDto dto)
         {
-            //WriteLogFile.WriteLog("ConsoleLog", String.Format("{0} @ {1}", "Log is Created at", DateTime.Now));
-            //WriteLogFile.Log("ConsoleLog.txt", String.Format("{0} @ {1}", "Log is Created at", DateTime.Now));
             _logger.Log(LogLevel.Information, JsonConvert.SerializeObject(dto));
 
             return Ok();
